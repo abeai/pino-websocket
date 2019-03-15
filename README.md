@@ -7,7 +7,7 @@ logs or work silently.
 You should install `pino-websocket` globally for ease of use:
 
 ```bash
-$ npm install -g pino-websocket
+$ npm install -g @abeai/pino-websocket
 ```
 
 [pino-websocket]: https://www.npmjs.com/package/pino-websocket
