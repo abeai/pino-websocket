@@ -1,0 +1,30 @@
+{
+  "name": "@abeai/pino-websocket",
+  "version": "0.1.0",
+  "description": "A pino 'transport' for writing to a websocket",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pino-websocket": "./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abeai/pino-websocket.git"
+  },
+  "author": "Kody Peterson <kody@abe.ai>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abeai/pino-websocket/issues"
+  },
+  "homepage": "https://github.com/abeai/pino-websocket#readme",
+  "dependencies": {
+    "async-exit-hook": "2.0.1",
+    "backoff": "2.5.0",
+    "nopt": "4.0.1",
+    "pump": "^3.0.0",
+    "split2": "3.1.0",
+    "ws": "6.2.0"
+  }
+}
