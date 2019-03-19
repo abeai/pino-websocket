@@ -1,6 +1,11 @@
+#!/usr/bin/env node
+
 const nopt = require('nopt');
 const exitHook = require('async-exit-hook');
 const websocketFactory = require('./lib/websocket');
+const through = require('through2');
+const pump = require('pump');
+const split = require('split2');
 let connection;
 let options = {
     address: '127.0.0.1',
@@ -52,3 +57,10 @@ exitHook((callback) => {
 
     callback();
 })
+
+const myTransport = through.obj(function transport (chunk, enc, cb) {
+    setImmediate(() => console.log(chunk));
+    cb();
+});
+
+if (!options.ne) pump(process.stdin, split(), myTransport);
