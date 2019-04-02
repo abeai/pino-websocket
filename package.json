@@ -1,6 +1,6 @@
 {
   "name": "@abeai/pino-websocket",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "A pino 'transport' for writing to a websocket",
   "main": "app.js",
   "scripts": {

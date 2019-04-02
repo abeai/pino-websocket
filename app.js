@@ -63,4 +63,4 @@ const myTransport = through.obj(function transport (chunk, enc, cb) {
     cb();
 });
 
-if (!options.ne) pump(process.stdin, split(), myTransport);
+if (!options.echo) pump(process.stdin, split(), myTransport);
