@@ -1,0 +1,1 @@
+node test.js | node app.js --debug --port 9020
