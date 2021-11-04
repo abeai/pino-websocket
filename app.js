@@ -2,6 +2,7 @@
 
 const nopt = require("nopt");
 const linebyline = require("linebyline");
+const buffer = require("buffer");
 let options = {
   address: "127.0.0.1",
   port: "514",
@@ -37,7 +38,9 @@ if (options.debug) {
 }
 
 const webSocketStream = require("./lib/websocket")(options);
-linebyline(process.stdin).on("line", (chunk) => {
+linebyline(process.stdin, {
+  maxLineLength: buffer.constants.MAX_LENGTH,
+}).on("line", (chunk) => {
   webSocketStream.write(chunk);
 });
 
